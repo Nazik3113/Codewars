@@ -6,7 +6,8 @@
   "scripts": {
     "webpack": "webpack watch --config webpack.config.js",
     "babel": "babel #src/js/index.js -d dist/js",
-    "lint": "eslint ./"
+    "lint": "eslint ./",
+    "test": "jest"
   },
   "keywords": [
     "Nazariy",
@@ -36,6 +37,7 @@
     "gulp-webp": "^4.0.1",
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html": "^1.0.2",
+    "jest": "^26.6.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   }

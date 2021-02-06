@@ -1,5 +1,8 @@
-function alphabetPosition(text) {
-    let letterArr = text.toLowerCase().split('');
+function alphabetPosition(text = '') {
+    if (text.trim().length === 0) {
+        return null;
+    }
+    let letterArr = text.toLowerCase().trim().split('');
     let res = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
     for (let i in letterArr) {
@@ -10,8 +13,7 @@ function alphabetPosition(text) {
             letterArr.splice(Number(i), 1);
         }
     }
-
-    return letterArr;
+    return letterArr.join(' ');
 }
 
-console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+module.exports = {alphabetPosition};

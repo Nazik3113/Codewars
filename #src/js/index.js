@@ -23,6 +23,16 @@ window.addEventListener('DOMContentLoaded', () => {
   // };
   // console.log(sum(3)(3)(3)(231)());
 
- 
+ navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
+   enableHighAccuracy: true,
+ })
+
+ function successLocation(position) {
+   console.log(position);
+ }
+
+ function errorLocation() {
+   
+ }
 });
 
